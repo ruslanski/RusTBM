@@ -37,7 +37,14 @@ lblInfo.grid(row=0, column=0)
 lblInfo=Label(Tops, font=('arial',8,'bold'), text=localtime,fg="Steel Blue", bd=10, anchor="w")
 lblInfo.grid(row=1,column=0)
 
-#BUTTONS
+#BUTTONS 
+def btnClick(btn):
+    # Code below is from Stack Overflow(User 'extraneon'). URL:stackoverflow.com/questions/1811691/running-an-outside-program-executable-in-python
+    btn = subprocess.Popen(["RogueKiller.exe"], \
+    stderr=subprocess.PIPE)
+    if btn.stderr:
+        print (btn.stderr.readlines())
+    
 
 #Left Side
 btn1=Button(f1, padx=8,pady=4,bd=2,fg="black",font=('arial',20,'bold'),
@@ -76,6 +83,5 @@ btn11=Button(f2, padx=8,pady=4,bd=2,fg="black",font=('arial',20,'bold'),
 
 btn12=Button(f2, padx=8,pady=4,bd=2,fg="black",font=('arial',20,'bold'),
             text="Button 12",bg="powder blue",command=lambda: btnClick(12)).grid(row=5,column=0)
-
 
 root.mainloop()
