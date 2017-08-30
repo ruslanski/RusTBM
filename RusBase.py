@@ -47,11 +47,13 @@ def btnClick(btn):
     
 
 #Left Side
+
 btn1=Button(f1, padx=8,pady=4,bd=2,fg="black",font=('arial',20,'bold'),
-            text="Button 1",bg="powder blue",command=lambda: btnClick(1)).grid(row=0,column=0)
+            text="HDD Diagnostics",bg="white",command=lambda: btnClick(1)).grid(row=0,column=0)
+
 
 btn2=Button(f1, padx=8,pady=4,bd=2,fg="black",font=('arial',20,'bold'),
-            text="Button 2",bg="powder blue",command=lambda: btnClick(2)).grid(row=1,column=0)
+            text="Startup Programs",bg="white",command=lambda: btnClick(2)).grid(row=1,column=0)
 
 btn3=Button(f1, padx=8,pady=4,bd=2,fg="black",font=('arial',20,'bold'),
             text="Button 3",bg="powder blue",command=lambda: btnClick(3)).grid(row=2,column=0)
