@@ -5,6 +5,7 @@
 #Date: 08/21/2017
 
 from tkinter import *
+from tkinter import ttk
 import random
 import time;
 import subprocess
@@ -35,9 +36,25 @@ class Application(Frame):
 
     def create_widgets(self):
         """Function below sets attributes for left and right sides.
-        Creates 12 buttons. 6 on the left side. 6 on the right side
-        """
-        #Left Side(For Buttons)
+        Creates 12 buttons. 6 on the left side. 6 on the right side"""
+
+        b = Button(root, text="OK")
+        b.pack()
+
+        tab1 = Frame(note, width=800, height=500, bg="powder blue", relief=SUNKEN)
+        tab2 = Frame(note, width=800, height=500, bg="powder blue", relief=SUNKEN)
+        tab3 = Frame(note, width=800, height=500, bg="powder blue", relief=SUNKEN)
+        tab4 = Button(root, text="Exit Application?", command=root.destroy)
+
+        note.add(tab1, text = "Tab One")
+        note.add(tab2, text = "Tab Two")
+        note.add(tab3, text = "Tab Three")
+        note.add(tab4, text = "Exit")
+        note.pack()
+
+
+ 
+"""     #Left Side(For Buttons)
         f1=Frame(root,width=200, height=300, bg="powder blue", relief=SUNKEN)
         f1.pack(side=LEFT)
 
@@ -45,8 +62,8 @@ class Application(Frame):
         f2=Frame(root,width=200, height=300, bg="powder blue", relief=SUNKEN)
         f2.pack(side=RIGHT)
 
-        #Create first buttom
-        btn1=Button(f1, padx=8,pady=3,bd=2,fg="black",font=('arial',15,'bold'),
+        #Create first button
+        btn1=Button(f1, pad=8,pady=3,bd=2,fg="black",font=('arial',15,'bold'),
                     text="Button 1",bg="powder blue",command=lambda: btnClick(1)).grid(row=0,column=0)
         #Create second button
         btn2=Button(f1, padx=8,pady=3,bd=2,fg="black",font=('arial',15,'bold'),
@@ -84,12 +101,16 @@ class Application(Frame):
             text="Button11",bg="powder blue",command=lambda: btnClick(11)).grid(row=4,column=0)
         #Create twelveth button
         btn12=Button(f2, padx=8,pady=3,bd=2,fg="black",font=('arial',14,'bold'),
-            text="Button12",bg="powder blue",command=lambda: btnClick(12)).grid(row=5,column=0)
+            text="Button12",bg="powder blue",command=lambda: btnClick(12)).grid(row=5,column=0)"""
         
         
 #Size of Window Frame and its Title.
 root = Tk()
 root.title("RusBase PC")
 root.geometry("400x600+0+0")
+note = ttk.Notebook(root)
+
 app = Application(root)
 root.mainloop()
+if __name__ == '__main__':
+    main()
