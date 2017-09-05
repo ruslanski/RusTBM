@@ -38,18 +38,38 @@ class Application(Frame):
         """Function below sets attributes for left and right sides.
         Creates 12 buttons. 6 on the left side. 6 on the right side"""
 
-        b = Button(root, text="OK")
+        b = Button(root)
         b.pack()
 
         tab1 = Frame(note, width=800, height=500, bg="powder blue", relief=SUNKEN)
         tab2 = Frame(note, width=800, height=500, bg="powder blue", relief=SUNKEN)
         tab3 = Frame(note, width=800, height=500, bg="powder blue", relief=SUNKEN)
-        tab4 = Button(root, text="Exit Application?", command=root.destroy)
+        tab4 = Frame(note, width=800, height=500, bg="powder blue", relief=SUNKEN)
+        tab5 = Frame(note, width=800, height=500, bg="powder blue", relief=SUNKEN)
+        tab6 = Frame(note, width=800, height=500, bg="powder blue", relief=SUNKEN)
+        tab7 = Frame(note, width=800, height=500, bg="powder blue", relief=SUNKEN)
+        tab8 = Frame(note, width=800, height=500, bg="powder blue", relief=SUNKEN)
+        tab9 = Frame(note, width=800, height=500, bg="powder blue", relief=SUNKEN)
 
-        note.add(tab1, text = "Tab One")
-        note.add(tab2, text = "Tab Two")
-        note.add(tab3, text = "Tab Three")
-        note.add(tab4, text = "Exit")
+        tab10 = Button(root, text="Exit Application?", command=root.destroy)
+
+        f1=Frame(root,width=200, height=300, bg="powder blue", relief=SUNKEN)
+        f1.pack(side=LEFT)
+
+        note.add(tab1, text = "PC/IP Info")
+
+        note.add(f1, text="test")
+        
+        note.add(tab2, text = "Audit")
+        note.add(tab3, text = "Audit 2")
+        note.add(tab4, text = "Remove")
+        note.add(tab5, text = "Update")
+        note.add(tab6, text = "Audit")
+        note.add(tab7, text = "Audit 2")
+        note.add(tab8, text = "Remove")
+        note.add(tab9, text = "Update")
+        
+        note.add(tab10, text = "Exit")
         note.pack()
 
 
@@ -107,7 +127,7 @@ class Application(Frame):
 #Size of Window Frame and its Title.
 root = Tk()
 root.title("RusBase PC")
-root.geometry("400x600+0+0")
+root.geometry("800x600+0+0")
 note = ttk.Notebook(root)
 
 app = Application(root)
