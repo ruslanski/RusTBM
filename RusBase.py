@@ -17,8 +17,9 @@ class Application(Frame):
     def __init__(self,master):
         self.master = master
         self.logo()
+        self.menu_bar()
         self.create_widgets()
-        
+
     def logo(self):
         #Set frame size and style for Logo 
         Tops=Frame(root, width=800, height=50,bg="powder blue",relief=SUNKEN)
@@ -33,101 +34,82 @@ class Application(Frame):
         lblInfo=Label(Tops, font=('arial',8,'bold'), text=localtime,fg="Steel Blue", bd=10, anchor="w")
         #Place Time
         lblInfo.grid(row=1,column=0)
+        
+    def menu_bar(self):
+        #This is a menu of the main Window. 'menu' is smth we make. 'Menu' is reference from Tkinter
+        menu=Menu(self.master)
+        #Define instance of the menu
+        self.master.config(menu=menu)
+        #First bar of the menu
+        file = Menu(menu)
+        #Add buttons to first bar of the menu.
+        file.add_command(label='Save', command='')
+        file.add_command(label='Exit', command=root.destroy)
+        #Add 'file' to the menu.
+        menu.add_cascade(label='File', menu=file)
+
+        #Second bar in the menu.
+        edit=Menu(menu)
+        edit.add_command(label='Undo', command='')
+        #Add 'edit' to the menu.
+        menu.add_cascade(label='Edit',menu=edit)
 
     def create_widgets(self):
-        """Function below sets attributes for left and right sides.
-        Creates 12 buttons. 6 on the left side. 6 on the right side"""
+         """
+         Creates 12 buttons. 6 on the left side. 6 on the right side
+         """
+         tab1 = Frame(note, width=800, height=500, bg="powder blue", relief=SUNKEN)
+         tab2 = Frame(note, width=800, height=500, bg="powder blue", relief=SUNKEN)
+         tab3 = Frame(note, width=800, height=500, bg="powder blue", relief=SUNKEN)
+         note.add(tab1, text = "Tab One")
+         note.add(tab2, text = "Tab Two")
+         note.add(tab3, text = "Tab Three")
+         note.pack()
+         
+         #Placing first six buttons in tab1.
+         btn1=Button(tab1,padx=140,bd=2,fg="black",font=('arial',18,'bold'),text="Button 1",bg="powder blue",command='')
+         btn1.place(x=40,y=5)
 
-        b = Button(root)
-        b.pack()
+         btn2=Button(tab1,padx=140,bd=2,fg="black",font=('arial',18,'bold'),text="Button 2",bg="powder blue",command='')
+         btn2.place(x=40,y=70)
 
-        tab1 = Frame(note, width=800, height=500, bg="powder blue", relief=SUNKEN)
-        tab2 = Frame(note, width=800, height=500, bg="powder blue", relief=SUNKEN)
-        tab3 = Frame(note, width=800, height=500, bg="powder blue", relief=SUNKEN)
-        tab4 = Frame(note, width=800, height=500, bg="powder blue", relief=SUNKEN)
-        tab5 = Frame(note, width=800, height=500, bg="powder blue", relief=SUNKEN)
-        tab6 = Frame(note, width=800, height=500, bg="powder blue", relief=SUNKEN)
-        tab7 = Frame(note, width=800, height=500, bg="powder blue", relief=SUNKEN)
-        tab8 = Frame(note, width=800, height=500, bg="powder blue", relief=SUNKEN)
-        tab9 = Frame(note, width=800, height=500, bg="powder blue", relief=SUNKEN)
+         btn3=Button(tab1,padx=140,bd=2,fg="black",font=('arial',18,'bold'),text="Button 3",bg="powder blue",command='')
+         btn3.place(x=40, y=140)
 
-        tab10 = Button(root, text="Exit Application?", command=root.destroy)
+         btn4=Button(tab1,padx=140,bd=2,fg="black",font=('arial',18,'bold'),text="Button 4",bg="powder blue",command='')
+         btn4.place(x=40, y=210)
 
-        f1=Frame(root,width=200, height=300, bg="powder blue", relief=SUNKEN)
-        f1.pack(side=LEFT)
+         btn5=Button(tab1,padx=140,bd=2,fg="black",font=('arial',18,'bold'),text="Button 5",bg="powder blue",command='')
+         btn5.place(x=40, y=280)
 
-        note.add(tab1, text = "PC/IP Info")
+         btn6=Button(tab1,padx=140,bd=2,fg="black",font=('arial',18,'bold'),text="Button 6",bg="powder blue",command='')
+         btn6.place(x=40,y=350)
 
-        note.add(f1, text="test")
-        
-        note.add(tab2, text = "Audit")
-        note.add(tab3, text = "Audit 2")
-        note.add(tab4, text = "Remove")
-        note.add(tab5, text = "Update")
-        note.add(tab6, text = "Audit")
-        note.add(tab7, text = "Audit 2")
-        note.add(tab8, text = "Remove")
-        note.add(tab9, text = "Update")
-        
-        note.add(tab10, text = "Exit")
-        note.pack()
+         #Placing stack of buttons into tab2.
 
+         btn7=Button(tab2,padx=140,bd=2,fg="black",font=('arial',18,'bold'),text="Button 7",bg="powder blue",command='')
+         btn7.place(x=40,y=5)
 
- 
-"""     #Left Side(For Buttons)
-        f1=Frame(root,width=200, height=300, bg="powder blue", relief=SUNKEN)
-        f1.pack(side=LEFT)
+         btn8=Button(tab2,padx=140,bd=2,fg="black",font=('arial',18,'bold'),text="Button 8",bg="powder blue",command='')
+         btn8.place(x=40,y=70)
 
-        #Right Side (For Buttons)
-        f2=Frame(root,width=200, height=300, bg="powder blue", relief=SUNKEN)
-        f2.pack(side=RIGHT)
+         btn9=Button(tab2,padx=140,bd=2,fg="black",font=('arial',18,'bold'),text="Button 9",bg="powder blue",command='')
+         btn9.place(x=40, y=140)
 
-        #Create first button
-        btn1=Button(f1, pad=8,pady=3,bd=2,fg="black",font=('arial',15,'bold'),
-                    text="Button 1",bg="powder blue",command=lambda: btnClick(1)).grid(row=0,column=0)
-        #Create second button
-        btn2=Button(f1, padx=8,pady=3,bd=2,fg="black",font=('arial',15,'bold'),
-                    text="Button 2",bg="powder blue",command=lambda: btnClick(2)).grid(row=1,column=0)
-        #Create third button
-        btn3=Button(f1, padx=8,pady=3,bd=2,fg="black",font=('arial',15,'bold'),
-                    text="Button 3",bg="powder blue",command=lambda: btnClick(3)).grid(row=2,column=0)
-        #Create fourth button
-        btn4=Button(f1, padx=8,pady=3,bd=2,fg="black",font=('arial',15,'bold'),
-                    text="Button 4",bg="powder blue",command=lambda: btnClick(4)).grid(row=3,column=0)
-        #Create fivth button
-        btn5=Button(f1, padx=8,pady=3,bd=2,fg="black",font=('arial',15,'bold'),
-                    text="Button 5",bg="powder blue",command=lambda: btnClick(5)).grid(row=4,column=0)
-        #Create sixth button
-        btn6=Button(f1, padx=8,pady=3,bd=2,fg="black",font=('arial',15,'bold'),
-                    text="Button 6",bg="powder blue",command=lambda: btnClick(6)).grid(row=5,column=0)
+         btn10=Button(tab2,padx=140,bd=2,fg="black",font=('arial',18,'bold'),text="Button 10",bg="powder blue",command='')
+         btn10.place(x=40, y=210)
 
-        #Right Side
-        #Create seventh button
-        btn7=Button(f2, padx=8,pady=3,bd=2,fg="black",font=('arial',15,'bold'),
-            text="Button 7",bg="powder blue",command=lambda: btnClick(7)).grid(row=0,column=0)
+         btn11=Button(tab2,padx=140,bd=2,fg="black",font=('arial',18,'bold'),text="Button 11",bg="powder blue",command='')
+         btn11.place(x=40, y=280)
 
-        #Create eights button
-        btn8=Button(f2, padx=8,pady=3,bd=2,fg="black",font=('arial',15,'bold'),
-            text="Button 8",bg="powder blue",command=lambda: btnClick(8)).grid(row=1,column=0)
-
-        #Create nineth button
-        btn9=Button(f2, padx=8,pady=3,bd=2,fg="black",font=('arial',15,'bold'),
-            text="Button 9",bg="powder blue",command=lambda: btnClick(9)).grid(row=2,column=0)
-        #Create tenth button
-        btn10=Button(f2, padx=8,pady=3,bd=2,fg="black",font=('arial',14,'bold'),
-            text="Button10",bg="powder blue",command=lambda: btnClick(10)).grid(row=3,column=0)
-        #Create eleventh button
-        btn11=Button(f2, padx=8,pady=3,bd=2,fg="black",font=('arial',14,'bold'),
-            text="Button11",bg="powder blue",command=lambda: btnClick(11)).grid(row=4,column=0)
-        #Create twelveth button
-        btn12=Button(f2, padx=8,pady=3,bd=2,fg="black",font=('arial',14,'bold'),
-            text="Button12",bg="powder blue",command=lambda: btnClick(12)).grid(row=5,column=0)"""
+         btn12=Button(tab2,padx=140,bd=2,fg="black",font=('arial',18,'bold'),text="Button 12",bg="powder blue",command='')
+         btn12.place(x=40,y=350)
         
         
 #Size of Window Frame and its Title.
 root = Tk()
 root.title("RusBase PC")
-root.geometry("800x600+0+0")
+root.geometry("500x600+0+0")
 note = ttk.Notebook(root)
 
 app = Application(root)
