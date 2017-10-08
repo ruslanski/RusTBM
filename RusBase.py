@@ -14,6 +14,7 @@ import subprocess
 import urllib
 import os
 
+
 class Application(Frame):
     """GUI application with twelve buttons"""
 
@@ -28,13 +29,13 @@ class Application(Frame):
         Tops=Frame(root)
         Tops.pack(side=TOP)
         #Set attributes of Logo
-        lblInfo=Label(Tops, font=('arial',20,'bold'), text="RusBase",fg="Steel Blue", bd=10,anchor="w")
+        lblInfo=Label(Tops, font=('arial',20,'bold'), text="RusBase PC",fg="Steel Blue",anchor="w")
         #Place Logo
         lblInfo.grid(row=1, column=0)
         localtime=time.asctime(time.localtime(time.time()))
 
         #Set attributes of Time 
-        lblInfo=Label(Tops, font=('arial',8,'bold'), text=localtime,fg="Steel Blue", bd=10, anchor="w")
+        lblInfo=Label(Tops, font=('arial',8,'bold'), text=localtime,anchor="w")
         #Place Time
         lblInfo.grid(row=2,column=0)
         
@@ -99,10 +100,10 @@ class Application(Frame):
          btn10=Button(tab1,padx=33,bd=2,fg="black",font=('arial',10,'bold'),text="Malwarebytes",command=self.btn10Click)
          btn10.place(x=8, y=370)
 
-         btn11=Button(tab1,padx=35,bd=2,fg="black",font=('arial',10,'bold'),text="ADW Cleaner",command=self.btn11Click)
+         btn11=Button(tab1,padx=36,bd=2,fg="black",font=('arial',10,'bold'),text="Adw Cleaner",command=self.btn11Click)
          btn11.place(x=8, y=410)
 
-         btn12=Button(tab1,padx=62,bd=2,fg="black",font=('arial',10,'bold'),text="Revo",command=self.btn12Click)
+         btn12=Button(tab1,padx=61,bd=2,fg="black",font=('arial',10,'bold'),text="Revo",command=self.btn12Click)
          btn12.place(x=8,y=450)
          
          #Place buttons in second column of tab1.
@@ -307,10 +308,10 @@ class Application(Frame):
             from urllib.request import urlretrieve
         except ImportError:
             from urllib import urlretrieve
-        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkcnZkX3FSMUdCaEk', 'Autoruns.exe')
-        file="Autoruns.exe"
+        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkaHVVUlpocVRSakE', 'rkill.exe')
+        file="rkill.exe"
         try:
-            btn=subprocess.call([file], shell=True)
+            btn=subprocess.csall([file], shell=True)
         finally:
             os.remove(file)
     def btn9Click(btn):
@@ -318,8 +319,8 @@ class Application(Frame):
             from urllib.request import urlretrieve
         except ImportError:
             from urllib import urlretrieve
-        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkcnZkX3FSMUdCaEk', 'Autoruns.exe')
-        file="Autoruns.exe"
+        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkc2lzZTdFTjNYTVU', 'RogueKiller.exe')
+        file="RogueKiller.exe"
         try:
             btn=subprocess.call([file], shell=True)
         finally:
@@ -329,8 +330,8 @@ class Application(Frame):
             from urllib.request import urlretrieve
         except ImportError:
             from urllib import urlretrieve
-        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkcnZkX3FSMUdCaEk', 'Autoruns.exe')
-        file="Autoruns.exe"
+        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkWjcwalRObi1iOU0', 'Malwarebytes.exe')
+        file="Malwarebytes.exe"
         try:
             btn=subprocess.call([file], shell=True)
         finally:
@@ -340,8 +341,9 @@ class Application(Frame):
             from urllib.request import urlretrieve
         except ImportError:
             from urllib import urlretrieve
-        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkcnZkX3FSMUdCaEk', 'Autoruns.exe')
-        file="Autoruns.exe"
+        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkM2thTl9GeEJZdTg', 'AdwCleaner.exe')
+        file="AdwCleaner.exe"
+        
         try:
             btn=subprocess.call([file], shell=True)
         finally:
@@ -351,8 +353,8 @@ class Application(Frame):
             from urllib.request import urlretrieve
         except ImportError:
             from urllib import urlretrieve
-        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkcnZkX3FSMUdCaEk', 'Autoruns.exe')
-        file="Autoruns.exe"
+        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkbmdqMWsyaHludnM', 'Revo.exe')
+        file="Revo.exe"
         try:
             btn=subprocess.call([file], shell=True)
         finally:
@@ -362,8 +364,8 @@ class Application(Frame):
             from urllib.request import urlretrieve
         except ImportError:
             from urllib import urlretrieve
-        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkcnZkX3FSMUdCaEk', 'Autoruns.exe')
-        file="Autoruns.exe"
+        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkaEEtTGNJeU1Ldnc', 'Windirstat.exe')
+        file="Windirstat.exe"
         try:
             btn=subprocess.call([file], shell=True)
         finally:
@@ -373,8 +375,8 @@ class Application(Frame):
             from urllib.request import urlretrieve
         except ImportError:
             from urllib import urlretrieve
-        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkcnZkX3FSMUdCaEk', 'Autoruns.exe')
-        file="Autoruns.exe"
+        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkeEVrcUFscWEyUlk', 'ConsolePortable.exe')
+        file="ConsolePortable.exe"
         try:
             btn=subprocess.call([file], shell=True)
         finally:
@@ -384,8 +386,8 @@ class Application(Frame):
             from urllib.request import urlretrieve
         except ImportError:
             from urllib import urlretrieve
-        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkcnZkX3FSMUdCaEk', 'Autoruns.exe')
-        file="Autoruns.exe"
+        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkN3A0OTY0MEV1dnM', 'ProcessExplorer.exe')
+        file="ProcessExplorer.exe"
         try:
             btn=subprocess.call([file], shell=True)
         finally:
@@ -395,8 +397,8 @@ class Application(Frame):
             from urllib.request import urlretrieve
         except ImportError:
             from urllib import urlretrieve
-        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkcnZkX3FSMUdCaEk', 'Autoruns.exe')
-        file="Autoruns.exe"
+        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkQWtveVZBWlhLUHc', 'WinAudit.exe')
+        file="WinAudit.exe"
         try:
             btn=subprocess.call([file], shell=True)
         finally:
@@ -406,8 +408,8 @@ class Application(Frame):
             from urllib.request import urlretrieve
         except ImportError:
             from urllib import urlretrieve
-        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkcnZkX3FSMUdCaEk', 'Autoruns.exe')
-        file="Autoruns.exe"
+        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkeGVBcXpHSXkxWjA', 'PatchMyPC.exe')
+        file="PatchMyPC.exe"
         try:
             btn=subprocess.call([file], shell=True)
         finally:
@@ -417,8 +419,8 @@ class Application(Frame):
             from urllib.request import urlretrieve
         except ImportError:
             from urllib import urlretrieve
-        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkcnZkX3FSMUdCaEk', 'Autoruns.exe')
-        file="Autoruns.exe"
+        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkaEJsdlBpci1rRHM', 'SystemRestoreManager.exe')
+        file="SystemRestoreManager.exe"
         try:
             btn=subprocess.call([file], shell=True)
         finally:
@@ -428,8 +430,8 @@ class Application(Frame):
             from urllib.request import urlretrieve
         except ImportError:
             from urllib import urlretrieve
-        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkcnZkX3FSMUdCaEk', 'Autoruns.exe')
-        file="Autoruns.exe"
+        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkQktwNW5tWlBuWUE', 'GPUShark.exe')
+        file="GPUShark.exe"
         try:
             btn=subprocess.call([file], shell=True)
         finally:
@@ -439,8 +441,8 @@ class Application(Frame):
             from urllib.request import urlretrieve
         except ImportError:
             from urllib import urlretrieve
-        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkcnZkX3FSMUdCaEk', 'Autoruns.exe')
-        file="Autoruns.exe"
+        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkcnZkX3FSMUdCaEk', 'GeekUninstaller.exe')
+        file="GeekUninstaller.exe"
         try:
             btn=subprocess.call([file], shell=True)
         finally:
@@ -461,8 +463,8 @@ class Application(Frame):
             from urllib.request import urlretrieve
         except ImportError:
             from urllib import urlretrieve
-        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkcnZkX3FSMUdCaEk', 'Autoruns.exe')
-        file="Autoruns.exe"
+        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkcnZkX3FSMUdCaEk', 'Recuva.exe')
+        file="Recuva.exe"
         try:
             btn=subprocess.call([file], shell=True)
         finally:
@@ -472,8 +474,8 @@ class Application(Frame):
             from urllib.request import urlretrieve
         except ImportError:
             from urllib import urlretrieve
-        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkcnZkX3FSMUdCaEk', 'Autoruns.exe')
-        file="Autoruns.exe"
+        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkcnZkX3FSMUdCaEk', 'CompleteWinRepair.exe')
+        file="CompleteWinRepair.exe"
         try:
             btn=subprocess.call([file], shell=True)
         finally:
@@ -483,8 +485,8 @@ class Application(Frame):
             from urllib.request import urlretrieve
         except ImportError:
             from urllib import urlretrieve
-        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkcnZkX3FSMUdCaEk', 'Autoruns.exe')
-        file="Autoruns.exe"
+        urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkcnZkX3FSMUdCaEk', 'WinSystemControl.exe')
+        file="WinSystemControl.exe"
         try:
             btn=subprocess.call([file], shell=True)
         finally:
@@ -500,6 +502,8 @@ class Application(Frame):
             btn=subprocess.call([file], shell=True)
         finally:
             os.remove(file)
+            
+    #Tab2
     def btn26Click(btn):
         try:
             from urllib.request import urlretrieve
