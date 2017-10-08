@@ -1,6 +1,6 @@
 #!usr/bin/env python3
 #RusBase PC
-#Version 0.0.4
+#Version 0.0.5
 #Author: Ruslan Shakirov
 #https://github.com/ruslanski/RusBase
 #Start Date: 08/21/2017
@@ -26,26 +26,33 @@ class Application(Frame):
 
     def logo(self):
         #Set frame size and style for Top Logo 
-        Tops=Frame(root)
-        Tops.pack(side=TOP)
+        #Tops=Frame(root)
+        #Tops.pack(side=TOP)
         #Set frame size and style for Bottom Logo
         Bots=Frame(root)
         Bots.pack(side=BOTTOM)
         #Set attributes of Top Logo
-        lblInfo=Label(Tops, font=('arial',20,'bold'), text="RusBase PC",fg="Steel Blue",anchor="w")
+        lblInfo=Label(root, font=('arial',20,'bold'), text="RusBase PC",fg="Steel Blue",bg="white")
         #Place Top Logo
-        lblInfo.grid(row=1, column=0)
+        lblInfo.pack(fill=BOTH, expand=1)
+        #lblInfo.grid(row=1, column=0)
         #Set attributes of Bottom Logo
         blInfo=Label(Bots,text="By Ruslan Shakirov. rshak02@gmail.com")
+        blInfo.pack(fill=BOTH, expand=1)
         #Place Bottom Logo
         blInfo.grid(row=15,column=0)
-
-        localtime=time.asctime(time.localtime(time.time()))
-
-        #Set attributes of Time 
-        lblInfo=Label(Tops, font=('arial',8,'bold'), text=localtime,anchor="w")
-        #Place Time
-        lblInfo.grid(row=2,column=0)
+        tblInfo = Label(root, font=('arial', 15, 'bold'),fg="Steel Blue",bg="white")
+        tblInfo.pack(fill=BOTH, expand=1)
+        def tick():
+            # get the current local time from the PC
+            time2 = time.strftime('%H:%M:%S')
+            # if time string has changed, update it
+            tblInfo.config(text=time2)
+            # calls itself every 200 milliseconds
+            # to update the time display as needed
+            # could use >200 ms, but display gets jerky
+            tblInfo.after(200,tick)
+        tick()
         
     def menu_bar(self):
         #This is a menu of the main Window. 'menu' is smth we make. 'Menu' is reference from Tkinter
@@ -69,9 +76,9 @@ class Application(Frame):
     def tab_buttons(self):
          """
          """
-         tab1 = Frame(note, width=800, height=500, bg="powder blue", relief=SUNKEN)
-         tab2 = Frame(note, width=800, height=500, bg="powder blue", relief=SUNKEN)
-         tab3 = Frame(note, width=800, height=500, bg="powder blue", relief=SUNKEN)
+         tab1 = Frame(note, width=400, height=650, bg="powder blue")
+         tab2 = Frame(note, width=400, height=650, bg="powder blue")
+         tab3 = Frame(note, width=400, height=650,bg="powder blue")
          note.add(tab1, text = "OS Tools")
          note.add(tab2, text = "End-User Software")
          note.add(tab3, text = "Remove")
@@ -1018,8 +1025,9 @@ class Application(Frame):
 
     #Size of Window Frame and its Title.
 root = Tk()
-root.title("RusBase PC 0.0.4")
-root.geometry("400x600+0+0")
+root.title("RusBase PC 0.0.5")
+root.geometry("400x650+0+0")
+root.iconbitmap(r'files\icon.ico')
 note = ttk.Notebook(root)
 
 app = Application(root)
