@@ -50,7 +50,7 @@ User: dln385. https://stackoverflow.com/questions/19080499/
 transparent-background-in-a-tkinter-window
 """
 window.overrideredirect(True)
-window.geometry("+100+100")
+window.geometry("+700+350")
 window.lift()
 window.wm_attributes("-topmost", True)
 window.wm_attributes("-disabled", True)

@@ -74,7 +74,8 @@ class Application(Frame):
         menu.add_cascade(label='Edit',menu=edit)
 
     def tab_buttons(self):
-         """
+         """This function creates tab1,tab2,tab3 inside main Window Frame.
+            With the following attributes in paranthesis.
          """
          tab1 = Frame(note, width=400, height=650, bg="powder blue")
          tab2 = Frame(note, width=400, height=650, bg="powder blue")
@@ -236,34 +237,41 @@ class Application(Frame):
          btn47.place(x=230,y=450)
     
     def btn1Click(btn):
-        """Function downloads a file from link, launches file and deletes after closing."""
-        for x in range(0,1):
-            try:
-                btn1=subprocess.check_call([sys.executable,'Loading-img.py'],timeout=2)
-            except:
-                pass
+        """This function downloads 'CrystalDIsk' file from the link, launches it,
+           and deletes after closing. All the functions below, are exactly the same as this one,
+           but with different links. From 'btn1Click' to 'btn25Click'.
+        """
+
         try:
             from urllib.request import urlretrieve
         except ImportError:
             from urllib import urlretrieve
         urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkUm5JdXRic1FMN00', 'CrystalDisk.exe')
+        pass
         file=("CrystalDisk.exe")
+        for x in range(0,1):
+            try:
+                btn1=subprocess.check_call([sys.executable,'Loading-img.py'],timeout=2)
+            except:
+                pass
         try:
             btn=subprocess.call([file], shell=True)
         finally:
             os.remove(file)
 
     def btn2Click(btn):
-        for x in range(0,1):
-            try:
-                btn1=subprocess.check_call([sys.executable,'Loading-img.py'],timeout=2)
-            except:
-                pass
+
         try:
             from urllib.request import urlretrieve
         except ImportError:
             from urllib import urlretrieve
         urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkakdSZkRSeXljWEk', 'HDDGuardian.exe')
+        pass
+        for x in range(0,1):
+            try:
+                btn1=subprocess.check_call([sys.executable,'Loading-img.py'],timeout=2)
+            except:
+                pass
         file="HDDGuardian.exe"
         
         try:
@@ -277,16 +285,17 @@ class Application(Frame):
             os.remove(file)
             
     def btn3Click(btn):
-        for x in range(0,1):
-            try:
-                btn1=subprocess.check_call([sys.executable,'Loading-img.py'],timeout=2)
-            except:
-                pass
         try:
             from urllib.request import urlretrieve
         except ImportError:
             from urllib import urlretrieve
         urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkVEdWaUVEY09BcFU', 'VictoriaHDD.exe')
+        pass
+        for x in range(0,1):
+            try:
+                btn1=subprocess.check_call([sys.executable,'Loading-img.py'],timeout=2)
+            except:
+                pass
         file="VictoriaHDD.exe"
         try:
             btn=subprocess.call([file], shell=True)
@@ -299,195 +308,154 @@ class Application(Frame):
             os.remove(file)
         
     def btn4Click(btn):
-        for x in range(0,1):
-            try:
-                btn1=subprocess.check_call([sys.executable,'Loading-img.py'],timeout=2)
-            except:
-                pass
         try:
             from urllib.request import urlretrieve
         except ImportError:
             from urllib import urlretrieve
         urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkcnZkX3FSMUdCaEk', 'Autoruns.exe')
+        pass
+        for x in range(0,1):
+            try:
+                btn1=subprocess.check_call([sys.executable,'Loading-img.py'],timeout=2)
+            except:
+                pass
         file="Autoruns.exe"
         try:
             btn=subprocess.call([file], shell=True)
-            for x in range(0,1):
-                try:
-                    btn1=subprocess.check_call([sys.executable,'Loading-img.py'],timeout=8)
-                except:
-                    pass
         finally:
             os.remove(file)
     def btn5Click(btn):
-        for x in range(0,1):
-            try:
-                btn1=subprocess.check_call([sys.executable,'Loading-img.py'],timeout=2)
-            except:
-                pass
         try:
             from urllib.request import urlretrieve
         except ImportError:
             from urllib import urlretrieve
         urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkcnZkX3FSMUdCaEk', 'Autoruns.exe')
+        pass
+        for x in range(0,1):
+            try:
+                btn1=subprocess.check_call([sys.executable,'Loading-img.py'],timeout=2)
+            except:
+                pass
         file="Autoruns.exe"
         try:
             btn=subprocess.call([file], shell=True)
-            for x in range(0,1):
-                try:
-                    btn1=subprocess.check_call([sys.executable,'Loading-img.py'],timeout=8)
-                except:
-                    pass
         finally:
             os.remove(file)
     def btn6Click(btn):
-        for x in range(0,1):
-            try:
-                btn1=subprocess.check_call([sys.executable,'Loading-img.py'],timeout=2)
-            except:
-                pass
         try:
             from urllib.request import urlretrieve
         except ImportError:
             from urllib import urlretrieve
         urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkcnZkX3FSMUdCaEk', 'Autoruns.exe')
-        file="Autoruns.exe"
-        try:
-            btn=subprocess.call([file], shell=True)
-            for x in range(0,1):
-                try:
-                    btn1=subprocess.check_call([sys.executable,'Loading-img.py'],timeout=8)
-                except:
-                    pass
-        finally:
-            os.remove(file)
-    def btn7Click(btn):
+        pass
         for x in range(0,1):
             try:
                 btn1=subprocess.check_call([sys.executable,'Loading-img.py'],timeout=2)
             except:
                 pass
+        file="Autoruns.exe"
+        try:
+            btn=subprocess.call([file], shell=True)
+        finally:
+            os.remove(file)
+    def btn7Click(btn):
         try:
             from urllib.request import urlretrieve
         except ImportError:
             from urllib import urlretrieve
         urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkd3NDU3QxTjhFUFE', 'Ccleaner.exe')
-        file="Ccleaner.exe"
-        try:
-            btn=subprocess.call([file], shell=True)
-            for x in range(0,1):
-                try:
-                    btn1=subprocess.check_call([sys.executable,'Loading-img.py'],timeout=8)
-                except:
-                    pass
-        finally:
-            os.remove(file)
-    def btn8Click(btn):
+        pass
         for x in range(0,1):
             try:
                 btn1=subprocess.check_call([sys.executable,'Loading-img.py'],timeout=2)
             except:
                 pass
+        file="Ccleaner.exe"
+        try:
+            btn=subprocess.call([file], shell=True)
+        finally:
+            os.remove(file)
+    def btn8Click(btn):
         try:
             from urllib.request import urlretrieve
         except ImportError:
             from urllib.request import urlretrieve
         urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkaHVVUlpocVRSakE', 'rkill.exe')
-        file="rkill.exe"
-        file2="rkill64.exe"
-        try:
-            btn=subprocess.call([file], shell=True)
-            for x in range(0,1):
-                try:
-                    btn1=subprocess.check_call([sys.executable,'Loading-img.py'],timeout=8)
-                except:
-                    pass
-        finally:
-            os.remove(file)
-            os.remove(file2)
-    def btn9Click(btn):
+        pass
         for x in range(0,1):
             try:
                 btn1=subprocess.check_call([sys.executable,'Loading-img.py'],timeout=2)
             except:
                 pass
+        file="rkill.exe"
+        file2="rkill64.exe"
+        try:
+            btn=subprocess.call([file], shell=True)
+        finally:
+            os.remove(file)
+            os.remove(file2)
+    def btn9Click(btn):
         try:
             from urllib.request import urlretrieve
         except ImportError:
             from urllib import urlretrieve
         urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkc2lzZTdFTjNYTVU', 'RogueKiller.exe')
-        file="RogueKiller.exe"
-        try:
-            btn=subprocess.call([file], shell=True)
-            for x in range(0,1):
-                try:
-                    btn1=subprocess.check_call([sys.executable,'Loading-img.py'],timeout=8)
-                except:
-                    pass
-        finally:
-            os.remove(file)
-    def btn10Click(btn):
         for x in range(0,1):
             try:
                 btn1=subprocess.check_call([sys.executable,'Loading-img.py'],timeout=2)
             except:
                 pass
+        file="RogueKiller.exe"
+        try:
+            btn=subprocess.call([file], shell=True)
+        finally:
+            os.remove(file)
+    def btn10Click(btn):
         try:
             from urllib.request import urlretrieve
         except ImportError:
             from urllib import urlretrieve
         urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkWjcwalRObi1iOU0', 'Malwarebytes.exe')
-        file="Malwarebytes.exe"
-        try:
-            btn=subprocess.call([file], shell=True)
-            for x in range(0,1):
-                try:
-                    btn1=subprocess.check_call([sys.executable,'Loading-img.py'],timeout=8)
-                except:
-                    pass
-        finally:
-            os.remove(file)
-    def btn11Click(btn):
         for x in range(0,1):
             try:
                 btn1=subprocess.check_call([sys.executable,'Loading-img.py'],timeout=2)
             except:
                 pass
+        file="Malwarebytes.exe"
+        try:
+            btn=subprocess.call([file], shell=True)
+        finally:
+            os.remove(file)
+    def btn11Click(btn):
         try:
             from urllib.request import urlretrieve
         except ImportError:
             from urllib import urlretrieve
         urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkM2thTl9GeEJZdTg', 'AdwCleaner.exe')
-        file="AdwCleaner.exe"
-        
-        try:
-            btn=subprocess.call([file], shell=True)
-            for x in range(0,1):
-                try:
-                    btn1=subprocess.check_call([sys.executable,'Loading-img.py'],timeout=8)
-                except:
-                    pass
-        finally:
-            os.remove(file)
-    def btn12Click(btn):
         for x in range(0,1):
             try:
                 btn1=subprocess.check_call([sys.executable,'Loading-img.py'],timeout=2)
             except:
                 pass
+        file="AdwCleaner.exe"
+        try:
+            btn=subprocess.call([file], shell=True)
+        finally:
+            os.remove(file)
+    def btn12Click(btn):
         try:
             from urllib.request import urlretrieve
         except ImportError:
             from urllib import urlretrieve
         urlretrieve('https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkbmdqMWsyaHludnM', 'Revo.exe')
+        for x in range(0,1):
+            try:
+                btn1=subprocess.check_call([sys.executable,'Loading-img.py'],timeout=2)
+            except:
+                pass
         file="Revo.exe"
         try:
             btn=subprocess.call([file], shell=True)
-            for x in range(0,1):
-                try:
-                    btn1=subprocess.check_call([sys.executable,'Loading-img.py'],timeout=8)
-                except:
-                    pass
         finally:
             os.remove(file)
     def btn13Click(btn):
@@ -1023,13 +991,16 @@ class Application(Frame):
             os.remove(file)
 
 
-    #Size of Window Frame and its Title.
 root = Tk()
+#Title of Window Frame.
 root.title("RusBase PC 0.0.5")
+#Size of Window Frame.
 root.geometry("400x650+0+0")
+#Sets icon for Window Frame.
 root.iconbitmap(r'files\icon.ico')
+#Attach tabs to Window Frame.
 note = ttk.Notebook(root)
-
+#Call Class Application.
 app = Application(root)
 root.mainloop()
 if __name__ == '__main__':
