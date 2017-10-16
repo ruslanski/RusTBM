@@ -55,7 +55,7 @@ window.lift()
 window.wm_attributes("-topmost", True)
 window.wm_attributes("-disabled", True)
 window.wm_attributes("-transparentcolor", "white")
-lbl=ImageLabel(window, bg='white')
+lbl=ImageLabel(window)
 #Transaparent Background Ends#
 lbl.load("files\loading.gif")
 lbl.pack(fill=BOTH, expand = True)

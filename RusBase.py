@@ -29,7 +29,7 @@ class Application(Frame):
         Bots=Frame(root)
         Bots.pack(side=BOTTOM)
         #Set attributes of Top Logo
-        lblInfo=Label(root, font=('arial',24,'bold'), text="Helpdesk Tools",fg="Steel blue",bg="white smoke")
+        lblInfo=Label(root, font=('arial',20,'bold'), text="Helpdesk Tools",fg="Steel blue",bg="white smoke")
         #Place Top Logo
         lblInfo.pack(fill=BOTH, expand=1)
         #lblInfo.grid(row=1, column=0)
@@ -102,6 +102,7 @@ class Application(Frame):
          CrystaldiskFile="CrystalDisk.exe"
          btn1=Button(tab1,padx=41,bd=2,fg="steel blue",font=('arial',10,'bold'),text="Crystal Disk",bg="light cyan",command=lambda: links.L.btnClick(Crystaldisk,CrystaldiskFile))
          btn1.place(x=8,y=10)
+
 
          Hddguardian="https://drive.google.com/uc?export=download&id=0B06Qp2heoHZkRml4VzVEUjlzWDA"
          HddguardianFile="Hddguardian.exe"
@@ -294,9 +295,7 @@ class Application(Frame):
 
          btn47=Button(tab2,padx=49,bd=2,fg="black",font=('arial',10,'bold'),text="FileZilla",bg="light cyan",command=lambda: links.L.btnClick(CrystalDisk,CrystalDiskFile))
          btn47.place(x=230,y=450)
-
-   
-
+         
 
 if __name__ == '__main__':
     root = Tk()
