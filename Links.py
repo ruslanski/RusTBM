@@ -3,7 +3,7 @@ import urllib
 import os
 
 class L:
-    def btn1Click(url,file):
+    def btnClick(url,file):
         """This function downloads a software from a link, launches it,
            and deletes after closing. 
         """
