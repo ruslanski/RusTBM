@@ -43,6 +43,7 @@ class ImageLabel(tk.Label):
             self.config(image=self.frames[self.loc])
             self.after(self.delay, self.next_frame)
 window=tk.Tk()
+
 """
 Below code makes background of image transparent.
 OS-Dependent,but works in Windows.
@@ -55,7 +56,7 @@ window.lift()
 window.wm_attributes("-topmost", True)
 window.wm_attributes("-disabled", True)
 window.wm_attributes("-transparentcolor", "white")
-lbl=ImageLabel(window)
+lbl=ImageLabel(window, bg="white")
 #Transaparent Background Ends#
 lbl.load("files\loading.gif")
 lbl.pack(fill=BOTH, expand = True)
