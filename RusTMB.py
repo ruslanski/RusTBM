@@ -6,13 +6,14 @@
 #Start Date: 08/21/2017
 
 from tkinter import *
+import tkinter as tk
 from tkinter import ttk
 from tkinter.scrolledtext import ScrolledText
 import random
 import time
 import links
 
-class Application(Frame):
+class Application(tk.Tk):
     """GUI application with twelve buttons"""
 
     def __init__(self,master):
@@ -74,6 +75,7 @@ class Application(Frame):
         #Third bar of the menu.
         about=Menu(menu)
         menu.add_cascade(label='About',menu=about)
+
 
     def tab_buttons(self):
          """This function creates tab1,tab2,tab3 inside main Window Frame.
@@ -306,7 +308,6 @@ class Application(Frame):
 
          btn47=Button(tab2,padx=49,bd=2,fg="black",font=('arial',10,'bold'),text="FileZilla",bg="light cyan",command=lambda: links.L.btnClick(CrystalDisk,CrystalDiskFile))
          btn47.place(x=230,y=450)
-         
 
 if __name__ == '__main__':
     root = Tk()
