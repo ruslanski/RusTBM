@@ -1,6 +1,6 @@
 # RusTMB
 
-RusTMB is a portable Windows app designed for Computer Technician needs, that launches portable software for OS troubleshooting, virus & malware removal, data backup & recovery. 
+RusTMB is a portable desktop app, designed for OS troubleshooting, virus & malware removal, data backup & recovery. Computer Technician software bundle toolkit.
 
 ## Built With
 
@@ -8,11 +8,20 @@ RusTMB is a portable Windows app designed for Computer Technician needs, that la
 
 ## Authors
 
-* **Ruslan Shakirov** - *Initial work* - [Ruslanski](https://github.com/ruslanski)
+* **Ruslan Shakirov** - [https://github.com/ruslanski](https://github.com/ruslanski)
 
 ## License
-
+MIT License
+Copyright (c) 2017 Ruslan Shakirov
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+##Contributing
+
+1. Fork it (https://github.com/ruslanski/RusTBM/fork)
+2. Create your feature branch (git checkout -b feature/fooBar)
+3. Commit your changes (git commit -am 'Add some fooBar')
+4. Push to the branch (git push origin feature/fooBar)
+5. Create a new Pull Request
 
 ## Acknowledgments
 
